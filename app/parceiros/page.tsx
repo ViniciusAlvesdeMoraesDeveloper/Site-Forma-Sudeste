@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { contatosPorEstado } from "../dataparceiros/parceiros"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
-import { ArrowLeft, Phone, MapPin, Users } from "lucide-react"
+import { ArrowLeft, Phone, MapPin, Users, Zap, BriefcaseBusiness, TrendingUp } from "lucide-react" // Adicionadas novas props para ícones
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import React, { useState } from "react"
@@ -49,84 +49,64 @@ export default function ParceirosPage() {
         <div className="container mx-auto max-w-7xl">
           <header className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Users className="w-4 h-4" />
-              Rede de Parceiros
+              <Zap className="w-4 h-4" /> {/* ALTERADO o ícone */}
+              Expansão de Parcerias
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 text-balance">Nossos Parceiros</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 text-balance">Seja um Parceiro Fundador da Forma Sudeste</h1> {/* ALTERADO o título */}
             <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto text-pretty">
-              Conheça nossa rede estratégica de parceiros que colaboram conosco para oferecer soluções inovadoras e o
-              melhor serviço educacional do mercado.
-            </p>
+              Junte-se a nós desde o início e lidere o mercado de educação técnica na sua região.
+              Ofereça cursos inovadores com suporte total da Forma Sudeste Escola Técnica.
+            </p> {/* ALTERADO a descrição */}
           </header>
 
+          {/* INÍCIO: Seção que substitui a lista de parceiros vazia */}
           <div className="space-y-16">
-            {contatosPorEstado.map((estado, estadoIndex) => (
-              <div
-                key={estado.nome}
-                className="relative"
-                itemScope
-                itemType="https://schema.org/Organization" // Schema para cada organização (estado)
-              >
-                <div className="flex items-center gap-3 mb-8">
-                  <div className="flex items-center gap-2 bg-orange-600 text-white px-6 py-3 rounded-lg shadow-sm">
-                    <MapPin className="w-5 h-5" />
-                    <h2 itemProp="location" className="text-2xl font-bold">{estado.nome}</h2>
-                  </div>
-                  <div className="flex-1 h-px bg-gradient-to-r from-orange-200 to-transparent"></div>
-                </div>
-                <ul className="grid grid-cols-1 lg:grid-cols-2 gap-12" role="list">
-                  {estado.empresas.map((empresa) => (
-                    <li
-                      key={empresa.nome}
-                      role="listitem"
-                      itemScope
-                      itemProp="makesOffer"
-                      itemType="https://schema.org/EducationalOrganization"
-                    >
-                      <Card
-                        className="border-0 shadow-lg bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all duration-300"
-                      >
-                        <CardHeader className="pb-4 bg-gradient-to-r from-gray-50 to-white border-b border-gray-100">
-                          <CardTitle
-                            itemProp="name"
-                            className="text-xl font-semibold text-gray-900 flex items-center gap-2"
-                          >
-                            <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                            {empresa.nome}
-                          </CardTitle>
-                        </CardHeader>
-                        <CardContent className="p-6">
-                          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            {empresa.contatos.map((contato) => (
-                              <li
-                                key={contato.nome}
-                                className="group p-4 rounded-lg border border-gray-200 hover:border-orange-300 hover:bg-orange-50/50 transition-all duration-200"
-                                itemScope
-                                itemProp="contactPoint"
-                                itemType="https://schema.org/ContactPoint"
-                              >
-                                <div className="flex items-start gap-3">
-                                  <div className="flex-shrink-0 w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center group-hover:bg-orange-200 transition-colors">
-                                    <Phone className="w-4 h-4 text-orange-600" />
-                                  </div>
-                                  <div className="flex-1 min-w-0">
-                                    <p itemProp="name" className="font-medium text-gray-900 text-sm mb-1 truncate">{contato.nome}</p>
-                                    <p itemProp="telephone" className="text-gray-600 text-sm font-mono">
-                                      {formatPhoneNumber(contato.telefone)}
-                                    </p>
-                                  </div>
-                                </div>
-                              </li>
-                            ))}
-                          </ul>
-                        </CardContent>
-                      </Card>
-                    </li>
-                  ))}
-                </ul>
+            <div className="text-center p-12 bg-white rounded-xl shadow-2xl border-t-4 border-orange-500">
+              <BriefcaseBusiness className="w-16 h-16 text-orange-500 mx-auto mb-6" />
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Sua Região nos espera!</h2>
+              <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+                Como uma instituição recém-fundada, estamos construindo nossa rede de Parceiros Fundadores.
+                Isso significa que as melhores oportunidades de exclusividade e crescimento na sua cidade
+                estão abertas para você agora.
+              </p>
+              <div className="flex justify-center">
+                <Button
+                  size="lg"
+                  className="px-8 py-4 text-lg rounded-full bg-orange-600 hover:bg-orange-700 transition-colors"
+                  onClick={() => setShowModal(true)}
+                >
+                  Descubra as Vantagens de Ser um Parceiro Fundador
+                  <TrendingUp className="ml-2 h-5 w-5" />
+                </Button>
               </div>
-            ))}
+
+              {/* Estrutura de Vantagens da Parceria - Opcional para preencher mais o espaço */}
+              <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <div className="p-4 rounded-lg bg-orange-50/50">
+                  <Zap className="w-6 h-6 text-orange-600 mb-2" />
+                  <h4 className="font-semibold text-gray-900">Exclusividade Regional</h4>
+                  <p className="text-sm text-gray-600">Garanta a representação única da Forma Sudeste na sua cidade.</p>
+                </div>
+                <div className="p-4 rounded-lg bg-orange-50/50">
+                  <BriefcaseBusiness className="w-6 h-6 text-orange-600 mb-2" />
+                  <h4 className="font-semibold text-gray-900">Suporte Prioritário</h4>
+                  <p className="text-sm text-gray-600">Acesso direto ao nosso time para implantação e crescimento rápido.</p>
+                </div>
+                <div className="p-4 rounded-lg bg-orange-50/50">
+                  <Users className="w-6 h-6 text-orange-600 mb-2" />
+                  <h4 className="font-semibold text-gray-900">Cursos de Alta Demanda</h4>
+                  <p className="text-sm text-gray-600">Portfólio atualizado focado nas necessidades do mercado de trabalho.</p>
+                </div>
+              </div>
+            </div>
           </div>
+          {/* FIM: Seção que substitui a lista de parceiros vazia */}
+
+          {/* REMOVIDA A SEÇÃO DE LISTAGEM DE PARCEIROS, JÁ QUE contatosPorEstado ESTÁ VAZIO */}
+          {/* {contatosPorEstado.map((estado, estadoIndex) => (
+            ... código de listagem ...
+          ))} */}
+
 
           <div className="mt-20 text-center">
             <Card className="inline-block bg-gradient-to-r from-orange-50 to-orange-100/50 border-orange-200 shadow-lg max-w-2xl">
@@ -134,18 +114,17 @@ export default function ParceirosPage() {
                 <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Users className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Interessado em se tornar nosso parceiro?</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Pronto para liderar o mercado de Educação Técnica?</h3> {/* ALTERADO o texto */}
                 <p className="text-gray-600 mb-6 text-pretty">
-                  Junte-se à nossa rede de parceiros e faça parte de uma comunidade comprometida com a excelência
-                  educacional.
-                </p>
+                  Entre em contato hoje para garantir sua exclusividade na inauguração da nossa rede de parceiros.
+                </p> {/* ALTERADO o texto */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
                   <Button
                     size="lg"
                     className="px-8 py-4 text-lg rounded-md hover:bg-orange-600"
                     onClick={() => setShowModal(true)}
                   >
-                    Solicitar Proposta
+                    Solicitar Contato
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </div>
@@ -161,7 +140,7 @@ export default function ParceirosPage() {
         <Modal
           isOpen={showModal}
           onClose={() => setShowModal(false)}
-          
+
         />
       )}
     </>

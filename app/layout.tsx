@@ -31,26 +31,26 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   
   title: {
-    default: "Faculdade Marinho | Cursos, Pós-Graduação e o Topo do Sucesso",
+    default: "Forma Sudeste | Cursos Técnicos e o Topo do Sucesso",
     
-    template: "%s | Faculdade Marinho",
+    template: "%s | Forma Sudeste",
   },
   
   
-  description: "A Faculdade Marinho oferece cursos de graduação e pós-graduação focados no sucesso profissional. Encontre sua carreira e alcance o topo conosco.",
+  description: "A Forma Sudeste Escola Técnica oferece cursos técnicos e de qualificação profissional focados na sua rápida inserção no mercado de trabalho. Encontre a área que te move e comece sua carreira com um diferencial competitivo.",
   
   
   openGraph: {
-    title: "Faculdade Marinho",
-    description: "A Faculdade Marinho oferece cursos de graduação e pós-graduação focados no sucesso profissional.",
+    title: "Forma Sudeste",
+    description: "A Forma Sudeste oferece cursos de graduação e pós-graduação focados no sucesso profissional.",
     url: 'https://seusite.com.br', 
-    siteName: 'Faculdade Marinho',
+    siteName: 'Forma Sudeste',
     images: [
       {
         url: 'https://seusite.com.br/images/og-image-default.jpg', 
         width: 1200,
         height: 630,
-        alt: 'Logo da Faculdade Marinho e Símbolo do Sucesso',
+        alt: 'Logo da Forma Sudeste e Símbolo do Sucesso',
       },
     ],
     locale: 'pt_BR',
@@ -60,8 +60,8 @@ export const metadata: Metadata = {
   
   twitter: {
     card: 'summary_large_image',
-    title: 'Faculdade Marinho',
-    description: 'Encontre sua carreira e alcance o topo do sucesso na Faculdade Marinho.',
+    title: 'Forma Sudeste',
+    description: 'Encontre sua carreira e alcance o topo do sucesso na Forma Sudeste.',
   },
 
   

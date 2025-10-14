@@ -1,10 +1,10 @@
 "use client"
 
-import {Button} from "@/components/ui/button";
-import {ArrowRight} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 import campusHero from "@/public/assets/campus-hero.jpg";
 import Modal from "@/components/Modal"
-import {useState} from "react";
+import { useState } from "react";
 import coursesData from "@/json/cursos.json";
 
 const Hero = () => {
@@ -21,7 +21,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img
           src={campusHero.src}
-          alt="Campus da Faculdade Marinho"
+          alt="Campus da Forma Sudeste" // ALTERADO: Descrição da imagem
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/35"></div>
@@ -44,8 +44,8 @@ const Hero = () => {
           <p
             className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto leading-relaxed text-white"
           >
-            Ofereça cursos de pós-graduação EAD com a legitimidade e segurança de uma
-            instituição credenciada pelo MEC.
+            Ofereça cursos técnicos e de qualificação com a qualidade e segurança da
+            Forma Sudeste Escola Técnica. Seja nosso parceiro!
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -55,33 +55,33 @@ const Hero = () => {
               onClick={() => setShowModal(true)}
             >
               Solicitar Proposta
-              <ArrowRight className="ml-2 h-5 w-5"/>
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Modal
               isOpen={showModal}
               onClose={() => setShowModal(false)}
-              
-              
+
+
             />
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
             <div className="text-center">
-              <div className="text-4xl font-bold mb-2" style={{color: "hsl(var(--orange-primary))"}}>18+
+              <div className="text-4xl font-bold mb-2" style={{ color: "hsl(var(--orange-primary))" }}>20+
               </div>
-              <div className="text-white">Anos de Experiência</div>
+              <div className="text-white">Áreas de Conhecimento</div> {/* NOVO: Foco na diversidade e amplitude */}
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold mb-2"
-                 style={{color: "hsl(var(--orange-primary))"}}>2.500+
+                style={{ color: "hsl(var(--orange-primary))" }}>100%
               </div>
-              <div className="text-white">Cursos no MEC</div>
+              <div className="text-white">Metodologia Inovadora</div> {/* NOVO: Foco em algo que se destaca da experiência tradicional */}
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold mb-2" style={{color: "hsl(var(--orange-primary))"}}>1.640
+              <div className="text-4xl font-bold mb-2" style={{ color: "hsl(var(--orange-primary))" }}>50+
               </div>
-              <div className="text-white">Portaria de Credenciamento</div>
+              <div className="text-white">Parcerias em Expansão</div> {/* NOVO: Foco na atração e crescimento de parcerias */}
             </div>
           </div>
         </div>

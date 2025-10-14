@@ -1,22 +1,46 @@
 {
-    "testimonials":[
+    "testimonials": [
         { 
-            "name": "Ana Carolina Silva", "course": "Administração - 2023", "text": "A Faculdade Marinho transformou minha vida profissional...", "rating": 4, "avatar": "AC" 
+            "name": "Ana Carolina Silva", 
+            "course": "Técnico em Administração - 2023", 
+            "text": "A Forma Sudeste Escola Técnica transformou minha vida profissional...", 
+            "rating": 4, 
+            "avatar": "AC" 
         },
-        {    
-            "name": "Carlos Eduardo Santos", "course": "Engenharia Civil - 2022", "text": "Os professores são excepcionais e a infraestrutura...", "rating": 5, "avatar": "CE" 
+        {     
+            "name": "Carlos Eduardo Santos", 
+            "course": "Técnico em Edificações - 2022", 
+            "text": "Os professores são excepcionais e a infraestrutura...", 
+            "rating": 5, 
+            "avatar": "CE" 
         },
         { 
-            "name": "Marina Oliveira", "course": "Psicologia - 2023", "text": "A metodologia de ensino é inovadora...", "rating": 4, "avatar": "MO"
+            "name": "Marina Oliveira", 
+            "course": "Técnico em Estética - 2023", 
+            "text": "A metodologia de ensino é inovadora...", 
+            "rating": 4, 
+            "avatar": "MO"
         },
         { 
-            "name": "Ricardo Ferreira", "course": "Sistemas de Informação - 2022", "text": "O curso é muito atualizado...", "rating": 5, "avatar": "RF"
+            "name": "Ricardo Ferreira", 
+            "course": "Técnico em Informática - 2022", 
+            "text": "O curso é muito atualizado...", 
+            "rating": 5, 
+            "avatar": "RF"
         },
         { 
-            "name": "Juliana Costa", "course": "Direito - 2021", "text": "A formação jurídica que recebi é incomparável...", "rating": 5, "avatar": "JC"
+            "name": "Juliana Costa", 
+            "course": "Técnico em Recursos Humanos - 2021", 
+            "text": "A formação técnica que recebi é incomparável...", 
+            "rating": 5, 
+            "avatar": "JC"
         },
         { 
-            "name": "Pedro Almeida", "course": "Enfermagem - 2023", "text": "A experiência prática que tive durante o curso...", "rating": 5, "avatar": "PA" 
+            "name": "Pedro Almeida", 
+            "course": "Técnico em Enfermagem - 2023", 
+            "text": "A experiência prática que tive durante o curso...", 
+            "rating": 5, 
+            "avatar": "PA" 
         }
     ]
 }

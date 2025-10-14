@@ -33,15 +33,15 @@ const Header = () => {
                         <div className="flex items-center space-x-2">
                             <div className="w-10 h-10 flex items-center justify-center">
                                 <Image
-                                    src="/logo-marinho.webp"
-                                    alt="Logo da Faculdade Marinho"
+                                    src="/logo-marinho.webp" // Manter o nome do arquivo original, mas a descrição mudará
+                                    alt="Logo da Forma Sudeste" // ALTERADO: Descrição do Logo
                                     width={40}
                                     height={40}
                                     className="rounded-lg"
                                 />
                                 
                             </div>
-                            <a href="/" className="text-xl font-bold text-#100D5D">Faculdade Marinho</a>
+                            <a href="/" className="text-xl font-bold text-#100D5D">Forma Sudeste</a> {/* ALTERADO: Nome da Faculdade */}
                         </div>
 
                         {/* Desktop Navigation */}

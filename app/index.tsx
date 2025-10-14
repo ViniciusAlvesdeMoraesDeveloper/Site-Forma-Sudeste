@@ -3,7 +3,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Sobre from "@/app/about/page";
-import Courses from "@/components/Courses";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";

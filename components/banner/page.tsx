@@ -24,7 +24,7 @@ const slides: Slide[] = [
     {
         id: 2,
         title: "Excelência Acadêmica",
-        description: "Oferecemos ensino superior de qualidade com infraestrutura moderna e corpo docente especializado",
+        description: "Oferecemos foramção técnica de qualidade com infraestrutura moderna e corpo docente especializado",
         image: "https://images.pexels.com/photos/159751/book-address-book-learning-learn-159751.jpeg?_gl=1*1if5keh*_ga*MTcxNzA2Mzc4OC4xNzU1NjI1MjMx*_ga_8JE65Q40S6*czE3NTc0MzAyNzckbzUkZzEkdDE3NTc0MzA1NzEkajQwJGwwJGgw",
     },
     {

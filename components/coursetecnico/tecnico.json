@@ -1,0 +1,314 @@
+[
+  {
+    "id": 1,
+    "slug": "administracao",
+    "title": "Administração",
+    "description": "Capacite-se para gerenciar recursos, planejar estratégias e liderar equipes em diversos setores empresariais."
+  },
+  {
+    "id": 2,
+    "slug": "agente-comunitario-de-saude",
+    "title": "Agente Comunitário de Saúde",
+    "description": "Atue na promoção da saúde, prevenção de doenças e acompanhamento de famílias e comunidades."
+  },
+  {
+    "id": 3,
+    "slug": "agricultura",
+    "title": "Agricultura",
+    "description": "Aprenda as técnicas modernas e sustentáveis de produção agrícola, desde o plantio até a colheita."
+  },
+  {
+    "id": 4,
+    "slug": "agrimensura",
+    "title": "Agrimensura",
+    "description": "Especialização em medição e demarcação de terrenos, aplicando conhecimentos de topografia e geoprocessamento."
+  },
+  {
+    "id": 5,
+    "slug": "agroindustria",
+    "title": "Agroindústria",
+    "description": "Domine os processos de transformação, conservação e industrialização de produtos agropecuários."
+  },
+  {
+    "id": 6,
+    "slug": "agropecuaria",
+    "title": "Agropecuária",
+    "description": "Aprenda a gerenciar a produção vegetal e animal, com foco em eficiência e sustentabilidade."
+  },
+  {
+    "id": 7,
+    "slug": "analises-clinicas",
+    "title": "Análises Clínicas",
+    "description": "Atue em laboratórios, realizando exames e análises que auxiliam no diagnóstico e tratamento de doenças."
+  },
+  {
+    "id": 8,
+    "slug": "aquicultura",
+    "title": "Aquicultura",
+    "description": "Especialização na criação de organismos aquáticos, como peixes e camarões, para fins comerciais."
+  },
+  {
+    "id": 9,
+    "slug": "automacao-industrial",
+    "title": "Automação Industrial",
+    "description": "Desenvolva e implemente sistemas automatizados para otimizar processos de produção na indústria."
+  },
+  {
+    "id": 10,
+    "slug": "biotecnologia",
+    "title": "Biotecnologia",
+    "description": "Explore a aplicação de organismos vivos para criar novos produtos e soluções em saúde, agricultura e meio ambiente."
+  },
+  {
+    "id": 11,
+    "slug": "contabilidade",
+    "title": "Contabilidade",
+    "description": "Domine o registro e a análise de transações financeiras, garantindo a saúde fiscal e a transparência de empresas."
+  },
+  {
+    "id": 12,
+    "slug": "cuidados-de-idosos",
+    "title": "Cuidados de Idosos",
+    "description": "Capacite-se para prestar assistência integral, com foco em bem-estar e qualidade de vida para a terceira idade."
+  },
+  {
+    "id": 13,
+    "slug": "defesa-civil",
+    "title": "Defesa Civil",
+    "description": "Atue na prevenção e resposta a desastres naturais e eventos de risco, protegendo comunidades e bens."
+  },
+  {
+    "id": 14,
+    "slug": "desenvolvimento-de-sistemas",
+    "title": "Desenvolvimento de Sistemas",
+    "description": "Construa e mantenha softwares e aplicativos, utilizando as linguagens de programação mais requisitadas do mercado."
+  },
+  {
+    "id": 15,
+    "slug": "design-grafico",
+    "title": "Design Gráfico",
+    "description": "Crie identidades visuais, layouts e materiais gráficos que comunicam ideias e marcas de forma impactante."
+  },
+  {
+    "id": 16,
+    "slug": "designer-de-interiores",
+    "title": "Designer de Interiores",
+    "description": "Planeje e crie ambientes internos funcionais, estéticos e personalizados, otimizando o espaço."
+  },
+  {
+    "id": 17,
+    "slug": "edificacoes",
+    "title": "Edificações",
+    "description": "Aprenda sobre o planejamento, a execução e a supervisão de obras, garantindo a segurança e qualidade de construções."
+  },
+  {
+    "id": 18,
+    "slug": "eletromecanica",
+    "title": "Eletromecânica",
+    "description": "Una conhecimentos de eletricidade e mecânica para projetar, instalar e manter máquinas e equipamentos complexos."
+  },
+  {
+    "id": 19,
+    "slug": "eletrotecnica",
+    "title": "Eletrotécnica",
+    "description": "Especialização em projetos, manutenção e operação de sistemas elétricos, industriais e de potência."
+  },
+  {
+    "id": 20,
+    "slug": "eletronica",
+    "title": "Eletrônica",
+    "description": "Domine o design, a montagem e a manutenção de circuitos e sistemas eletrônicos em diversas aplicações."
+  },
+  {
+    "id": 21,
+    "slug": "enfermagem",
+    "title": "Enfermagem",
+    "description": "Atue no cuidado e na assistência direta a pacientes, promovendo a saúde e a recuperação em hospitais e clínicas."
+  },
+  {
+    "id": 22,
+    "slug": "equipamentos-biomedicos",
+    "title": "Equipamentos Biomédicos",
+    "description": "Especialização em manutenção e calibração de equipamentos médicos, garantindo seu funcionamento correto e seguro."
+  },
+  {
+    "id": 23,
+    "slug": "estetica",
+    "title": "Estética",
+    "description": "Aprenda as técnicas e procedimentos para cuidados faciais e corporais, promovendo o bem-estar e a beleza."
+  },
+  {
+    "id": 24,
+    "slug": "eventos",
+    "title": "Eventos",
+    "description": "Planeje, organize e execute eventos de diferentes portes, desde corporativos até festas e feiras."
+  },
+  {
+    "id": 25,
+    "slug": "farmacia",
+    "title": "Farmácia",
+    "description": "Domine a manipulação de medicamentos, a dispensação de fármacos e a assistência farmacêutica a pacientes."
+  },
+  {
+    "id": 26,
+    "slug": "gastronomia",
+    "title": "Gastronomia",
+    "description": "Desenvolva habilidades culinárias, técnicas de cozinha e gestão de alimentos para atuar em restaurantes e eventos."
+  },
+  {
+    "id": 27,
+    "slug": "gerencia-em-saude",
+    "title": "Gerência em Saúde",
+    "description": "Gerencie a administração de serviços e unidades de saúde, otimizando recursos e garantindo a qualidade do atendimento."
+  },
+  {
+    "id": 28,
+    "slug": "guia-em-turismo",
+    "title": "Guia em Turismo",
+    "description": "Conduza e oriente visitantes em passeios turísticos, compartilhando informações culturais e históricas de forma envolvente."
+  },
+  {
+    "id": 29,
+    "slug": "informatica-para-internet",
+    "title": "Informática para Internet",
+    "description": "Construa e mantenha websites e sistemas web, utilizando tecnologias essenciais para o ambiente digital."
+  },
+  {
+    "id": 30,
+    "slug": "logistica",
+    "title": "Logística",
+    "description": "Gerencie o fluxo de materiais e informações, do estoque à distribuição, garantindo eficiência e redução de custos."
+  },
+  {
+    "id": 31,
+    "slug": "manutencao-de-maquinas-industriais",
+    "title": "Manutenção de Máquinas Industriais",
+    "description": "Especialização na manutenção preventiva e corretiva de equipamentos industriais, assegurando a operação contínua da produção."
+  },
+  {
+    "id": 32,
+    "slug": "manutencao-de-maquinas-navais",
+    "title": "Manutenção de Máquinas Navais",
+    "description": "Mantenha e repare os sistemas mecânicos e eletrônicos de embarcações, com foco em segurança e eficiência marítima."
+  },
+  {
+    "id": 33,
+    "slug": "marketing",
+    "title": "Marketing",
+    "description": "Desenvolva estratégias de promoção de produtos e serviços, análise de mercado e comunicação com o público-alvo."
+  },
+  {
+    "id": 34,
+    "slug": "meio-ambiente",
+    "title": "Meio Ambiente",
+    "description": "Atue em projetos de gestão ambiental, fiscalização e sustentabilidade, promovendo a conservação dos recursos naturais."
+  },
+  {
+    "id": 35,
+    "slug": "metalurgia",
+    "title": "Metalurgia",
+    "description": "Domine os processos de extração, purificação e produção de metais e ligas metálicas para uso industrial."
+  },
+  {
+    "id": 36,
+    "slug": "mineracao",
+    "title": "Mineração",
+    "description": "Especialização nas técnicas de exploração e extração de minerais, com foco em segurança e impacto ambiental."
+  },
+  {
+    "id": 37,
+    "slug": "manutencao-de-maquinas-pesadas",
+    "title": "Manutenção de Máquinas Pesadas",
+    "description": "Capacite-se para realizar a manutenção e o reparo de grandes máquinas utilizadas na construção e indústria."
+  },
+  {
+    "id": 38,
+    "slug": "nutricao-e-dietetica",
+    "title": "Nutrição e Dietética",
+    "description": "Atue no planejamento de dietas e na orientação alimentar, promovendo hábitos saudáveis e bem-estar."
+  },
+  {
+    "id": 39,
+    "slug": "optica",
+    "title": "Óptica",
+    "description": "Especialização na fabricação e montagem de lentes e na assistência técnica para produtos ópticos."
+  },
+  {
+    "id": 40,
+    "slug": "prevencao-e-controle-de-incendios",
+    "title": "Prevenção e Controle de Incêndios",
+    "description": "Atue na elaboração de planos de segurança e no combate a incêndios, protegendo vidas e patrimônios."
+  },
+  {
+    "id": 41,
+    "slug": "qualidade",
+    "title": "Qualidade",
+    "description": "Implemente e gerencie sistemas de qualidade em empresas, garantindo a excelência de processos e produtos."
+  },
+  {
+    "id": 42,
+    "slug": "radiologia",
+    "title": "Radiologia",
+    "description": "Domine as técnicas de exames por imagem, como raio-x e ressonância, para auxiliar no diagnóstico médico."
+  },
+  {
+    "id": 43,
+    "slug": "recursos-humanos",
+    "title": "Recursos Humanos",
+    "description": "Gerencie o capital humano de uma organização, atuando em recrutamento, treinamento e gestão de benefícios."
+  },
+  {
+    "id": 44,
+    "slug": "redes-de-computadores",
+    "title": "Redes de Computadores",
+    "description": "Projete, instale e mantenha redes de computadores, garantindo a conectividade e segurança de sistemas."
+  },
+  {
+    "id": 45,
+    "slug": "refrigeracao-e-climatizacao",
+    "title": "Refrigeração e Climatização",
+    "description": "Especialização na instalação e manutenção de sistemas de refrigeração e ar condicionado em ambientes diversos."
+  },
+  {
+    "id": 46,
+    "slug": "saude-bucal",
+    "title": "Saúde Bucal",
+    "description": "Aprenda a auxiliar em procedimentos odontológicos, atuando na prevenção de doenças e na promoção da saúde bucal."
+  },
+  {
+    "id": 47,
+    "slug": "secretaria-escolar",
+    "title": "Secretaria Escolar",
+    "description": "Organize e gerencie a documentação escolar, atuando no suporte administrativo de instituições de ensino."
+  },
+  {
+    "id": 48,
+    "slug": "seguranca-do-trabalho",
+    "title": "Segurança do Trabalho",
+    "description": "Atue na prevenção de acidentes e na promoção da saúde e segurança dos trabalhadores em ambientes corporativos."
+  },
+  {
+    "id": 49,
+    "slug": "servicos-juridicos",
+    "title": "Serviços Jurídicos",
+    "description": "Preste suporte em rotinas de escritórios de advocacia, organizando processos e documentos legais."
+  },
+  {
+    "id": 50,
+    "slug": "sistemas-de-energia-renovavel",
+    "title": "Sistemas de Energia Renovável",
+    "description": "Projete e instale sistemas que geram energia limpa, como solar e eólica, contribuindo para a sustentabilidade."
+  },
+  {
+    "id": 51,
+    "slug": "soldagem",
+    "title": "Soldagem",
+    "description": "Capacite-se nas técnicas de união de materiais, como solda e corte, em construções e reparos industriais."
+  },
+  {
+    "id": 52,
+    "slug": "veterinaria",
+    "title": "Veterinária",
+    "description": "Aprenda a cuidar da saúde e do bem-estar de animais, com foco em diagnóstico, tratamento e prevenção de doenças."
+  }
+]

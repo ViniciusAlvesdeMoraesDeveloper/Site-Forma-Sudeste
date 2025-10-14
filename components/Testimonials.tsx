@@ -17,7 +17,7 @@ const Testimonials = () => {
             O que nossos <span className="text-primary">Ex-Alunos</span> dizem
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Histórias reais de sucesso de quem passou pela Faculdade Marinho e se transformou profissionalmente.
+            Histórias de alunos que conquistaram novas habilidades e se transformaram profissionalmente com os cursos técnicos da Forma Sudeste.
           </p>
         </header>
 
@@ -87,10 +87,10 @@ const Testimonials = () => {
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8">
           {[
-            { value: "5.000+", label: "Alunos Formados" },
-            { value: "98%", label: "Taxa de Empregabilidade" },
-            { value: "4.9", label: "Avaliação Média" },
-            { value: "18+", label: "Anos de Tradição" }
+            { value: "100%", label: "Foco na Prática" }, 
+            { value: "95%", label: "Satisfação dos Alunos" }, 
+            { value: "4.9", label: "Avaliação Média" }, 
+            { value: "20+", label: "Cursos de Alta Demanda" } 
           ].map((stat, i) => (
             <div key={i} className="text-center">
               <div className="text-4xl font-bold text-primary mb-2">{stat.value}</div>
