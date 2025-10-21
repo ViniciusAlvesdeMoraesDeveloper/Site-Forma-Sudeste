@@ -11,6 +11,7 @@ import Modal from "@/components/Modal"
 import coursesData from "@/json/cursos.json"
 import About from "@/app/about/page";
 import Image from "next/image";
+
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
     const pathname = usePathname();
@@ -26,22 +27,23 @@ const Header = () => {
 
     return (
         <>
-            <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-border">
+            <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-border ">
                 <div className="container mx-auto px-4 py-4">
                     <div className="flex items-center justify-between">
                         {/* Logo */}
                         <div className="flex items-center space-x-2">
                             <div className="w-10 h-10 flex items-center justify-center">
                                 <Image
-                                    src="/logo-marinho.webp" // Manter o nome do arquivo original, mas a descrição mudará
-                                    alt="Logo da Forma Sudeste" // ALTERADO: Descrição do Logo
+                                    src="/logo-marinho.webp" 
+                                    alt="Logo da Forma Sudeste" 
                                     width={40}
                                     height={40}
                                     className="rounded-lg"
                                 />
                                 
                             </div>
-                            <a href="/" className="text-xl font-bold text-#100D5D">Forma Sudeste</a> {/* ALTERADO: Nome da Faculdade */}
+                          
+                            <a href="/" className="text-xl font-bold text-indigo-600">Forma Sudeste Educação e Negócios</a> 
                         </div>
 
                         {/* Desktop Navigation */}
@@ -50,7 +52,8 @@ const Header = () => {
                                 <Link
                                     key={item.href}
                                     href={item.href}
-                                    className={`text-foreground hover:text-primary transition-color ${item.href === "/" && isHomePage ? "text-primary" : "text-foreground"} ${item.href === "/about" && isCoursePage ? "text-primary" : "text-foregound"}`}
+                                    
+                                    className={`text-foreground hover:text-violet-500 transition-color ${item.href === "/" && isHomePage ? "text-violet-500" : "text-foreground"} ${item.href === "/about" && isCoursePage ? "text-violet-500" : "text-foregound"}`}
                                 >
                                     {item.label}
                                 </Link>
@@ -58,13 +61,11 @@ const Header = () => {
 
                             <Link href="https://ead.eduno.com.br/iguacu">
                                 <Button
-
                                     variant="secondary"
-                                    className="bg-primary hover:bg-orange-600"
-
+                                    
+                                    className="bg-violet-500 hover:bg-violet-600 text-white" 
                                 >
                                     Àrea do Parceiro
-
                                 </Button>
                             </Link>
                         </nav>
@@ -82,7 +83,7 @@ const Header = () => {
                         </ButtonLink>
                     </div>
 
-                    {/* Mobile Navigation */}
+                   
                     {isMenuOpen && (
                         <nav className="md:hidden mt-4 pb-4 border-t pt-4">
                             <div className="flex flex-col space-y-4">
@@ -90,19 +91,28 @@ const Header = () => {
                                     <Link
                                         key={item.href}
                                         href={item.href}
-                                        className="text-foreground hover:text-primary transition-colors"
+                                        
+                                        className="text-foreground hover:text-violet-500 transition-colors"
                                         onClick={() => setIsMenuOpen(false)}
                                     >
                                         {item.label}
                                     </Link>
                                 ))}
-                                <ButtonLink href="Dialog" variant="default"
-                                    className="bg-primary hover:bg-orange-dark w-full">
-                                    Inscreva-se
-                                </ButtonLink>
+
+                                <div>
+                                    <Link href="https://ead.eduno.com.br/iguacu">
+                                        <Button
+                                            variant="secondary"
+                                            className="w-full bg-violet-500 hover:bg-violet-600 text-white" 
+                                        >
+                                            Àrea do Parceiro
+                                        </Button>
+                                    </Link>
+                            </div>
                             </div>
                         </nav>
                     )}
+
                 </div>
             </header>
 

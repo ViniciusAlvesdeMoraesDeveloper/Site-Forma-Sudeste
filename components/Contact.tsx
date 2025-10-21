@@ -8,11 +8,11 @@ const Contact = () => {
     const contactInfo = [
         {
             icon: MapPin,
-            title: "Localização Central", // ALTERADO: Destaca a localização
+            title: "Localização Central",
             info: "Luiz Rodrigues dos Santos, 44\nTodos os Santos - Coronel Fabriciano/MG\nCEP: 35170-061"
         },
-        { icon: Phone, title: "Fale Conosco", info: "(31) 98288-3280 \n(31) 98325-6247 \n(31) 99342-2575" }, // ALTERADO: Título
-        { icon: Mail, title: "E-mail Direto", info: "contato@formasudeste.com.br" }, // ALTERADO: E-mail e Título
+        { icon: Phone, title: "Fale Conosco", info: "(31) 97314-4070 " },
+        { icon: Mail, title: "E-mail Direto", info: "gerenciageraltecminas@gmail.com" },
         { icon: Clock, title: "Horário de Atendimento", info: "Segunda a Sexta: 8h às 18h" }
     ];
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -22,16 +22,16 @@ const Contact = () => {
         <section
             id="contato"
             className="py-20 bg-background"
-            itemScope // Inicia o Schema Markup
-            itemType="https://schema.org/ContactPage" // Indica que a página é de contato
+            itemScope
+            itemType="https://schema.org/ContactPage"
         >
             <div className="container mx-auto px-4">
                 <header className="text-center mb-16">
                     <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                        Fale com a <span className="text-primary">Forma Sudeste</span> {/* ALTERADO: Nome da instituição */}
+                        Fale com a <span className="text-purple-600">Forma Sudeste</span> {/* Alterado de text-primary para roxo */}
                     </h1>
                     <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                        Pronto para iniciar sua jornada técnica? Tire suas dúvidas sobre os cursos ou explore oportunidades de parceria. {/* ALTERADO: Foco em jornada técnica e parcerias */}
+                        Pronto para iniciar sua jornada técnica? Tire suas dúvidas sobre os cursos ou explore oportunidades de parceria.
                     </p>
                 </header>
 
@@ -42,14 +42,14 @@ const Contact = () => {
                                 key={index}
                                 className="w-full"
                                 itemScope
-                                itemProp="contactPoint" // Indica um ponto de contato dentro da página
+                                itemProp="contactPoint"
                                 itemType="https://schema.org/ContactPoint"
                             >
-                                <Card className="flex group hover:shadow-orange transition-shadow border-none">
+                                <Card className="flex group hover:shadow-purple-400 transition-shadow border-none"> {/* Alterado hover:shadow-orange para hover:shadow-purple-400 */}
                                     <CardContent className="p-6 w-full">
                                         <div className="flex items-start gap-4">
-                                            <div className="bg-primary/10 p-3 rounded-lg transition-colors">
-                                                <item.icon className="h-6 w-6 text-primary" />
+                                            <div className="bg-purple-600/10 p-3 rounded-lg transition-colors"> {/* Alterado bg-primary/10 para bg-purple-600/10 */}
+                                                <item.icon className="h-6 w-6 text-purple-600" /> {/* Alterado text-primary para text-purple-600 */}
                                             </div>
                                             <div>
                                                 <h2 itemProp="contactType" className="font-semibold text-lg mb-2 text-foreground">
@@ -67,8 +67,8 @@ const Contact = () => {
                     </ul>
                 </div>
 
-                <div className="mt-16 text-center bg-gradient-to-r from-orange-500 to bg-orange-700 rounded-2xl p-12 text-primary-foreground">
-                    <h2 className="text-3xl font-bold mb-4">Parceria de Sucesso: Maximize sua Escola!</h2> 
+                <div className="mt-16 text-center bg-gradient-to-r from-purple-600 to bg-purple-900 rounded-2xl p-12 text-primary-foreground"> {/* Alterado de-orange-500 e bg-orange-700 para roxo */}
+                    <h2 className="text-3xl font-bold mb-4">Parceria de Sucesso: Maximize sua Escola!</h2>
                     <p className="text-xl mb-8 opacity-90">Junte-se à Forma Sudeste e ofereça cursos técnicos práticos e de alta demanda para seus alunos com o suporte de uma instituição moderna e em crescimento.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">

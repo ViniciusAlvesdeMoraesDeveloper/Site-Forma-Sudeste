@@ -1,16 +1,14 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { contatosPorEstado } from "../dataparceiros/parceiros"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
-import { ArrowLeft, Phone, MapPin, Users, Zap, BriefcaseBusiness, TrendingUp } from "lucide-react" // Adicionadas novas props para ícones
+import { ArrowLeft, Phone, MapPin, Users, Zap, BriefcaseBusiness, TrendingUp, Star, Crown, Target, Rocket, Shield, DollarSign } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import React, { useState } from "react"
 import { ArrowRight } from "lucide-react"
 import Modal from "../../components/Modal"
-
 
 const formatPhoneNumber = (phoneNumber: string) => {
   if (!phoneNumber) return ""
@@ -28,108 +26,177 @@ export default function ParceirosPage() {
   return (
     <>
       <Header />
-      <div className="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-200">
-        <div className="container mx-auto max-w-7xl px-4 py-4">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-gray-600 hover:text-orange-600 transition-colors font-medium"
-            aria-label="Voltar para a página principal"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Voltar para página principal
-          </Link>
-        </div>
-      </div>
+      {/* Hero Section Mais Impactante */}
+      <section className="relative py-20 px-4 bg-gradient-to-br from-purple-500 via-purple-600 to-purple-600 min-h-[80vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="absolute top-0 left-0 w-72 h-72 bg-white/10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-400/20 rounded-full translate-x-1/3 translate-y-1/3"></div>
 
-      <section
-        className="py-16 px-4 bg-gradient-to-br from-gray-50 to-white min-h-screen"
-        itemScope
-        itemType="https://schema.org/WebPage"
-      >
-        <div className="container mx-auto max-w-7xl">
-          <header className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Zap className="w-4 h-4" /> {/* ALTERADO o ícone */}
-              Expansão de Parcerias
+        <div className="container mx-auto max-w-7xl relative z-10">
+          <div className="text-center text-white">
+            <div className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full text-lg font-semibold mb-8 border border-white/30">
+              <Crown className="w-6 h-6" />
+              Oportunidade Exclusiva para Líderes
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 text-balance">Seja um Parceiro Fundador da Forma Sudeste</h1> {/* ALTERADO o título */}
-            <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto text-pretty">
-              Junte-se a nós desde o início e lidere o mercado de educação técnica na sua região.
-              Ofereça cursos inovadores com suporte total da Forma Sudeste Escola Técnica.
-            </p> {/* ALTERADO a descrição */}
-          </header>
 
-          {/* INÍCIO: Seção que substitui a lista de parceiros vazia */}
-          <div className="space-y-16">
-            <div className="text-center p-12 bg-white rounded-xl shadow-2xl border-t-4 border-orange-500">
-              <BriefcaseBusiness className="w-16 h-16 text-orange-500 mx-auto mb-6" />
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Sua Região nos espera!</h2>
-              <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
-                Como uma instituição recém-fundada, estamos construindo nossa rede de Parceiros Fundadores.
-                Isso significa que as melhores oportunidades de exclusividade e crescimento na sua cidade
-                estão abertas para você agora.
-              </p>
-              <div className="flex justify-center">
-                <Button
-                  size="lg"
-                  className="px-8 py-4 text-lg rounded-full bg-orange-600 hover:bg-orange-700 transition-colors"
-                  onClick={() => setShowModal(true)}
-                >
-                  Descubra as Vantagens de Ser um Parceiro Fundador
-                  <TrendingUp className="ml-2 h-5 w-5" />
-                </Button>
+            <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight drop-shadow-2xl">
+              Seja <span className="text-purple-100">Parceiro Fundador</span>
+            </h1>
+
+            <p className="text-2xl md:text-3xl text-purple-100 leading-relaxed max-w-4xl mx-auto mb-10 font-medium drop-shadow-lg">
+              Lidere o mercado de educação técnica na sua região com suporte total e exclusividade territorial
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+              <Button
+                size="lg"
+
+                className="px-12 py-6 text-xl rounded-full bg-white text-purple-600 hover:bg-purple-50 font-bold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
+                onClick={() => setShowModal(true)}
+              >
+                <Rocket className="mr-3 w-6 h-6" />
+                Quero Ser Parceiro
+              </Button>
+
+              <Button
+                size="lg"
+                className="px-10 py-6 text-xl rounded-full border-2 border-white bg-transparent text-white hover:bg-white/20 font-semibold backdrop-blur-sm transition-all duration-300"
+                onClick={() => setShowModal(true)}
+              >
+                <Target className="mr-2 w-5 h-5" />
+                Ver Vantagens
+              </Button>
+            </div>
+
+            {/* Estatísticas Impactantes */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-black text-white mb-2">100%</div>
+                <div className="text-purple-200 text-sm font-semibold">Exclusividade</div>
               </div>
-
-              {/* Estrutura de Vantagens da Parceria - Opcional para preencher mais o espaço */}
-              <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-                <div className="p-4 rounded-lg bg-orange-50/50">
-                  <Zap className="w-6 h-6 text-orange-600 mb-2" />
-                  <h4 className="font-semibold text-gray-900">Exclusividade Regional</h4>
-                  <p className="text-sm text-gray-600">Garanta a representação única da Forma Sudeste na sua cidade.</p>
-                </div>
-                <div className="p-4 rounded-lg bg-orange-50/50">
-                  <BriefcaseBusiness className="w-6 h-6 text-orange-600 mb-2" />
-                  <h4 className="font-semibold text-gray-900">Suporte Prioritário</h4>
-                  <p className="text-sm text-gray-600">Acesso direto ao nosso time para implantação e crescimento rápido.</p>
-                </div>
-                <div className="p-4 rounded-lg bg-orange-50/50">
-                  <Users className="w-6 h-6 text-orange-600 mb-2" />
-                  <h4 className="font-semibold text-gray-900">Cursos de Alta Demanda</h4>
-                  <p className="text-sm text-gray-600">Portfólio atualizado focado nas necessidades do mercado de trabalho.</p>
-                </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-black text-white mb-2">30+</div>
+                <div className="text-purple-200 text-sm font-semibold">Cursos Técnicos</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-black text-white mb-2">1º</div>
+                <div className="text-purple-200 text-sm font-semibold">Lugar na Região</div>
               </div>
             </div>
           </div>
-          {/* FIM: Seção que substitui a lista de parceiros vazia */}
+        </div>
+      </section>
 
-          {/* REMOVIDA A SEÇÃO DE LISTAGEM DE PARCEIROS, JÁ QUE contatosPorEstado ESTÁ VAZIO */}
-          {/* {contatosPorEstado.map((estado, estadoIndex) => (
-            ... código de listagem ...
-          ))} */}
+      {/* Seção de Oportunidade */}
+      <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center p-16 bg-white rounded-3xl shadow-2xl border border-gray-100 relative overflow-hidden">
+            {/* Elementos decorativos */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-500/10 to-purple-600/10 rounded-full -translate-y-16 translate-x-16"></div>
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-purple-500/10 to-purple-600/10 rounded-full -translate-x-12 translate-y-12"></div>
 
+            <div className="relative z-10">
+              <BriefcaseBusiness className="w-20 h-20 text-purple-500 mx-auto mb-8 p-4 bg-purple-50 rounded-2xl" />
+              <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                <span className="bg-gradient-to-r from-purple-600 to-purple-600 bg-clip-text text-transparent">
+                  Sua Cidade é Nossa Próxima Fronteira!
+                </span>
+              </h2>
 
-          <div className="mt-20 text-center">
-            <Card className="inline-block bg-gradient-to-r from-orange-50 to-orange-100/50 border-orange-200 shadow-lg max-w-2xl">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Users className="w-8 h-8 text-white" />
+              <p className="text-xl text-gray-700 mb-12 max-w-4xl mx-auto leading-relaxed font-medium">
+                Como instituição em expansão, estamos selecionando <strong>Parceiros Fundadores</strong> estratégicos
+                para dominar o mercado de educação técnica. As melhores áreas ainda estão disponíveis - e essa janela
+                de oportunidade fecha em breve.
+              </p>
+
+              {/* Cards de Vantagens Melhorados */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div className="p-8 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-500 text-white shadow-xl transform hover:scale-105 transition-all duration-300">
+                  <Crown className="w-12 h-12 mb-4 text-purple-200" />
+                  <h4 className="text-xl font-black mb-3">Exclusividade Total</h4>
+                  <p className="text-purple-100 leading-relaxed">
+                    Seja o único representante Forma Sudeste na sua região com área protegida.
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Pronto para liderar o mercado de Educação Técnica?</h3> {/* ALTERADO o texto */}
-                <p className="text-gray-600 mb-6 text-pretty">
-                  Entre em contato hoje para garantir sua exclusividade na inauguração da nossa rede de parceiros.
-                </p> {/* ALTERADO o texto */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                  <Button
-                    size="lg"
-                    className="px-8 py-4 text-lg rounded-md hover:bg-orange-600"
-                    onClick={() => setShowModal(true)}
-                  >
-                    Solicitar Contato
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
+
+                <div className="p-8 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white shadow-xl transform hover:scale-105 transition-all duration-300">
+                  <DollarSign className="w-12 h-12 mb-4 text-cyan-200" />
+                  <h4 className="text-xl font-black mb-3">Investimento Zero</h4>
+                  <p className="text-blue-100 leading-relaxed">
+                    Sem taxas de franquia. Modelo de negócio com retorno acelerado.
+                  </p>
                 </div>
-              </CardContent>
-            </Card>
+
+                <div className="p-8 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 text-white shadow-xl transform hover:scale-105 transition-all duration-300">
+                  <Shield className="w-12 h-12 mb-4 text-emerald-200" />
+                  <h4 className="text-xl font-black mb-3">Suporte Completo</h4>
+                  <p className="text-green-100 leading-relaxed">
+                    Da implantação à operação, nossa equipe especializada está com você.
+                  </p>
+                </div>
+              </div>
+
+              <Button
+                size="lg"
+                className="w-full sm:w-auto px-10 py-6 text-lg rounded-full bg-gradient-to-r from-purple-600 to-purple-600 hover:from-purple-700 hover:to-purple-700 text-white shadow-2xl hover:shadow-xl transform hover:scale-105 transition-all duration-300 font-black mt-4"
+                onClick={() => setShowModal(true)}
+              >
+                <TrendingUp className="mr-3 w-6 h-6" />
+                Garanta Exclusividade
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Seção de Chamada Final */}
+      <section className="py-20 px-4 bg-gradient-to-br from-gray-900 to-gray-800">
+        <div className="container mx-auto max-w-5xl text-center">
+          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-16 border border-white/20">
+            <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl">
+              <Star className="w-10 h-10 text-white" />
+            </div>
+
+            <h3 className="text-3xl md:text-4xl font-black text-white mb-6">
+              Vagas Limitadas para <span className="text-purple-400">Parceiros Fundadores</span>
+            </h3>
+
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+              As melhores localidades estão sendo disputadas. Não perca a chance de ser o pioneiro
+              na educação técnica da sua região.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Button
+                size="lg"
+                className="px-12 py-6 text-lg rounded-full bg-purple-500 hover:bg-purple-400 text-gray-900 font-black shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
+                onClick={() => setShowModal(true)}
+              >
+                <Target className="mr-2 w-5 h-5" />
+                Reservar Minha Área
+              </Button>
+
+              <Button
+                size="lg"
+                className="px-10 py-6 text-lg rounded-full border-2 border-white bg-transparent text-white hover:bg-white/10 font-semibold transition-all duration-300"
+                onClick={() => {
+                  const phoneNumber = "5531973144070"; // Substitua pelo número da empresa
+                  const message = "Olá! Gostaria de falar com um consultor sobre a oportunidade de ser Parceiro da Forma Sudeste.";
+                  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                  window.open(whatsappUrl, '_blank');
+                }}
+              >
+                <Phone className="mr-2 w-5 h-5" />
+                Falar com Consultor
+              </Button>
+            </div>
+
+            {/* Urgência */}
+            <div className="mt-12 p-6 bg-purple-500/20 rounded-2xl border border-purple-400/30">
+              <p className="text-purple-300 font-semibold text-lg">
+                ⚠️ Últimas vagas disponíveis para o lançamento da rede
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -140,7 +207,6 @@ export default function ParceirosPage() {
         <Modal
           isOpen={showModal}
           onClose={() => setShowModal(false)}
-
         />
       )}
     </>

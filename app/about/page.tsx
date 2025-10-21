@@ -2,7 +2,7 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Award, BookOpen, Target, Users, Smartphone } from "lucide-react";
-import studentsSuccess from "@/public/assets/students-success.jpg";
+import parceria from "@/public/assets/parceria.jpg";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { ArrowRight } from "lucide-react";
@@ -14,51 +14,39 @@ import Footer from "@/components/Footer";
 const About = () => {
   const router = useRouter();
 
+ 
   const features = [
-    // ... (seus dados de features)
     {
       icon: Award,
-      title: "Tradição e Credibilidade",
-      description: "A Faculdade Iguaçu, credenciada pela portaria Nº 1.640, de 19/09/2019, possui 18 anos de experiência educacional, com mais de 2.500 cursos de pós-graduação EAD registrados no MEC, garantindo legitimidade educacional para sua instituição."
+      title: "Inovação e Foco Técnico",
+      description: "O Colégio Técnico Forma Sudeste é uma instituição recém-criada com a missão de oferecer o que há de mais atual em educação técnica, garantindo a formação de profissionais prontos para o mercado."
     },
     {
       icon: Users,
-      title: "Intermediação Especializada",
-      description: "A Faculdade Marinho atua como intermediadora exclusiva de negócios educacionais, viabilizando parcerias estratégicas que permitem a abertura de unidades credenciadas para matrícula em cursos de pós-graduação."
+      title: "Parceria Estratégica",
+      description: "Atuamos para viabilizar parcerias exclusivas, permitindo que nossos parceiros expandam seu portfólio de cursos técnicos com a segurança e o suporte de uma instituição focada no futuro da educação."
     },
     {
       icon: BookOpen,
-      title: "Diferencial Competitivo",
-      description: "Ofereça cursos reconhecidos e autorizados sem investimentos em infraestrutura acadêmica própria, ampliando seu portfólio educacional com segurança jurídica e pedagógica."
+      title: "Expansão de Portfólio",
+      description: "Amplie sua oferta educacional com cursos técnicos de alta demanda sem o investimento inicial em infraestrutura própria, focando apenas na captação de alunos e na qualidade da entrega."
     },
     {
       icon: Target,
-      title: "Parceria que Gera Resultados",
-      description: "Nossa parceria garante que você possa oferecer o que há de mais inovador em educação, com o respaldo de uma instituição sólida e de alta qualidade."
+      title: "Visão de Futuro",
+      description: "Nossa parceria se baseia na projeção de resultados a longo prazo, oferecendo um modelo de negócio sustentável e alinhado com as necessidades do mercado de trabalho do Sudeste."
     }
   ];
 
+  
   const contactSections = [
-    // ... (seus dados de contato)
     {
-      title: "Pós-Graduação",
+      title: "Equipe Técnica Forma Sudeste",
       contacts: [
         {
-          number: "(31) 98288-3280",
-          href: "https://wa.me/5531982883280?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20parceria%20de%20P%C3%B3s-Gradua%C3%A7%C3%A3o%20com%20a%20Faculdade%20Marinho.%20Poderiam%20me%20ajudar%3F"
-        },
-        {
-          number: "(31) 98325-6247",
-          href: "https://wa.me/5531983256247?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20parceria%20de%20P%C3%B3s-Gradua%C3%A7%C3%A3o%20com%20a%20Faculdade%20Marinho.%20Poderiam%20me%20ajudar%3F"
-        },
-      ]
-    },
-    {
-      title: "Técnico",
-      contacts: [
-        {
-          number: "(31) 99342-2575",
-          href: "https://wa.me/5531993422575?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20parceria%20de%20cursos%20t%C3%A9cnicos%20com%20a%20Faculdade%20Marinho.%20Poderiam%20me%20ajudar%3F"
+          
+          number: "(31) 97314-4070",
+          href: "https://wa.me/5531993422575?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20as%20parcerias%20com%20o%20Col%C3%A9gio%20T%C3%A9cnico%20Forma%20Sudeste.%20Poderiam%20me%20ajudar%3F"
         },
       ]
     }
@@ -73,22 +61,23 @@ const About = () => {
         <section id="sobre" className="py-20 bg-gradient-subtle">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              
+
               <div>
                 <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                  Parceria que Gera
-                  <span className="block text-primary">Resultados</span>
+                  O Futuro da Educação Técnica
+                  <span className="block text-purple-700">Começa Aqui</span>
                 </h2>
 
                 <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                  A Faculdade Marinho atua como intermediadora exclusiva de negócios educacionais, viabilizando parcerias estratégicas para a oferta de cursos de pós-graduação da Faculdade Iguaçu e cursos técnicos da Global Tec. Essa colaboração permite a abertura de unidades credenciadas para matrícula e expande o portfólio educacional das instituições parceiras com segurança e qualidade.
+                  O Colégio Técnico Forma Sudeste nasceu para ser o parceiro ideal na expansão da sua oferta de cursos técnicos. Focados em um modelo de parceria ágil e moderno, oferecemos o suporte completo para que sua instituição possa oferecer educação técnica de alta qualidade, garantindo resultados rápidos e um diferencial competitivo no mercado do Sudeste.
                 </p>
 
                 <div className="grid sm:grid-cols-2 gap-6 mb-8">
                   {features.map((feature, index) => (
                     <Card key={index} className="border-none shadow-md hover:shadow-lg transition-shadow">
                       <CardContent className="p-6">
-                        <feature.icon className="h-12 w-12 text-primary mb-4" />
+                        {/* ÍCONE COM COR ROXA (purple-700) */}
+                        <feature.icon className="h-12 w-12 text-purple-700 mb-4" />
                         <h3 className="text-xl font-semibold mb-2 text-foreground">{feature.title}</h3>
                         <p className="text-muted-foreground">{feature.description}</p>
                       </CardContent>
@@ -101,19 +90,21 @@ const About = () => {
               <div className="relative">
                 <div className="relative overflow-hidden rounded-2xl shadow-elegant">
                   <Image
-                    src={studentsSuccess}
-                    alt="Estudantes da Faculdade Marinho"
+                    src={parceria}
+                    alt="Estudantes do Colégio Técnico Forma Sudeste" 
                     width={800}
                     height={600}
                     className="w-full h-[600px] object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 </div>
-                <Card className="absolute -bottom-6 -left-6 bg-background shadow-orange border-none">
+
+                
+                <Card className="absolute -bottom-6 -left-6 bg-background shadow-lg border-none"> 
                   <CardContent className="p-6">
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-primary mb-1">18+</div>
-                      <div className="text-sm text-muted-foreground">Anos de Experiência</div>
+                      <div className="text-3xl font-bold text-purple-700 mb-1">100%</div>
+                      <div className="text-sm text-muted-foreground">Foco em Parcerias</div>
                     </div>
                   </CardContent>
                 </Card>
@@ -121,48 +112,48 @@ const About = () => {
             </div>
           </div>
 
-          {/* SEÇÃO DE CONTATOS AGRUPADA POR ÁREA */}
           <div className="container mx-auto px-4 mt-20">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Fale com um de nossos consultores</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Fale com a Equipe Técnica</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Entre em contato conosco através do WhatsApp e tire todas as suas dúvidas sobre nossas parcerias
-                educacionais
+                Entre em contato conosco através do WhatsApp e descubra como expandir sua oferta de educação técnica em parceria com o Colégio Técnico Forma Sudeste.
               </p>
             </div>
 
             {contactSections.map((section, index) => (
               <div key={index} className="mb-16">
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-primary mb-2">{section.title}</h3>
-                  <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+                  
+                  <h3 className="text-2xl font-bold text-purple-700 mb-2">{section.title}</h3>
+                  
+                  <div className="w-20 h-1 bg-purple-700 mx-auto rounded-full"></div>
                 </div>
 
                 <div className="max-w-4xl mx-auto">
                   <div
-                    className={`grid gap-6 ${section.contacts.length === 1
-                        ? "grid-cols-1 max-w-md mx-auto"
-                        : "grid-cols-1 md:grid-cols-2 lg:grid-cols-2"
-                      }`}
+                    className={`grid gap-6 grid-cols-1 max-w-md mx-auto`}
                   >
                     {section.contacts.map((contact, contactIndex) => (
                       <Card
                         key={contactIndex}
-                        className="group border-2 border-primary/20 shadow-lg hover:shadow-xl hover:border-primary/40 transition-all duration-300 transform hover:-translate-y-1"
+                        className="group border-2 border-purple-700/20 shadow-lg hover:shadow-xl hover:border-purple-700/40 transition-all duration-300 transform hover:-translate-y-1"
                       >
                         <CardContent className="p-8 text-center h-full flex flex-col justify-between">
                           <div className="flex-1">
-                            <div className="bg-primary/10 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
-                              <Smartphone className="h-10 w-10 text-primary" />
+                           
+                            <div className="bg-purple-700/10 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:bg-purple-700/20 transition-colors">
+                              
+                              <Smartphone className="h-10 w-10 text-purple-700" />
                             </div>
                             <h4 className="text-xl font-bold text-foreground mb-2 tracking-wide">{contact.number}</h4>
                             <p className="text-muted-foreground mb-6 text-sm">
-                              Clique para iniciar uma conversa no WhatsApp
+                              Clique para iniciar uma conversa sobre parcerias no WhatsApp
                             </p>
                           </div>
 
                           <Link href={contact.href} passHref className="w-full">
-                            <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105">
+                            
+                            <Button className="w-full bg-purple-700 hover:bg-purple-700/90 text-white py-3 text-base font-semibold rounded-lg transition-all duration-200 hover:scale-105">
                               <Smartphone className="mr-2 h-4 w-4" />
                               Iniciar Conversa
                             </Button>
@@ -179,7 +170,7 @@ const About = () => {
         </section>
       </main>
 
-      
+
       <Footer />
 
     </div>

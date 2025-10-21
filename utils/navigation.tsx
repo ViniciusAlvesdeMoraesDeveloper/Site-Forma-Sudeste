@@ -5,7 +5,6 @@ export const navigationItems = [
   { href: '/parceiros', label: 'Parceiros' },
   { href: "/#contato", label: "Contato" },
   { href: '/about', label: 'Sobre' },
-  { href: '/ouvidoria', label: 'Ouvidoria' },
   { href: "/cursos", label: "Cursos" }
   
 ];

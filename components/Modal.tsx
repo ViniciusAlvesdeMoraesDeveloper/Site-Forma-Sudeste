@@ -25,11 +25,15 @@ export type EnrollmentFormData = z.infer<typeof enrollmentSchema>
 interface ModalProps {
   isOpen: boolean
   onClose: () => void
-  
-  
 }
 
-export default function Modal({ isOpen, onClose}: ModalProps) {
+export default function Modal({ isOpen, onClose }: ModalProps) {
+  // Definindo o gradiente roxo e cores fixas para garantir que o Tailwind reconheça
+  const PURPLE_GRADIENT = "from-purple-600 to-violet-700";
+  const PURPLE_BASE = "purple-600";
+  const PURPLE_HOVER = "purple-700";
+
+
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
 
@@ -70,8 +74,8 @@ export default function Modal({ isOpen, onClose}: ModalProps) {
   // Função para enviar o formulário e lidar com a resposta da API
   const handleSubmitForm = async (data: EnrollmentFormData) => {
     setIsSubmitting(true)
-//Colocar a URL da Integrately
-  const INTEGRATELY_WEBHOOK_URL ='https://webhooks.integrately.com/a/webhooks/5bd023710825410384f1c0f5a999fa65';  
+    //Colocar a URL da Integrately
+    const INTEGRATELY_WEBHOOK_URL = 'https://webhooks.integrately.com/a/webhooks/e368511726a4464b99c4e5271f43578b';
 
     try {
       const apiData = {
@@ -80,16 +84,17 @@ export default function Modal({ isOpen, onClose}: ModalProps) {
         phone: data.phone,
         message: data.message || "",
       };
-      const response = await fetch (INTEGRATELY_WEBHOOK_URL,{
-        method:'POST',
-        headers:{'Content-Type':'application/json',  
+      const response = await fetch(INTEGRATELY_WEBHOOK_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(apiData),
       });
 
-      if(!response.ok){
-        throw new Error('Falaha ao enviar os dados para o Integrately');
-       }
+      if (!response.ok) {
+        throw new Error('Falha ao enviar os dados para o Integrately');
+      }
       setIsSuccess(true)
       reset()
       toast({
@@ -129,11 +134,13 @@ export default function Modal({ isOpen, onClose}: ModalProps) {
   return (
     <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/50">
       <div className="bg-background text-foreground rounded-xl shadow-elegant w-full max-w-md max-h-screen overflow-y-auto relative border border-border">
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-hero"></div>
+        {/* Linha superior com gradiente roxo */}
+        <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${PURPLE_GRADIENT}`}></div>
 
         <div className="bg-gradient-subtle p-6 text-center border-b border-border">
-          <div className="w-16 h-16 bg-gradient-hero rounded-full flex items-center justify-center mx-auto mb-4 shadow-orange">
-            <GraduationCap className="w-8 h-8 text-primary-foreground" />
+          {/* Fundo do ícone com gradiente roxo e sombra roxa */}
+          <div className={`w-16 h-16 bg-gradient-to-r ${PURPLE_GRADIENT} rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl shadow-${PURPLE_BASE}/30`}>
+            <GraduationCap className="w-8 h-8 text-white" />
           </div>
           <h2 className="text-2xl font-bold text-foreground mb-2">Solicite uma Proposta</h2>
           <p className="text-muted-foreground">Preencha o formulário e descubra como podemos expandir seu negócio</p>
@@ -146,7 +153,8 @@ export default function Modal({ isOpen, onClose}: ModalProps) {
                 <label className="block text-sm font-semibold text-foreground mb-2">Nome da Instituição</label>
                 <Input
                   {...register("name")}
-                  className="w-full px-4 py-3 border border-input rounded-lg focus:border-primary focus:ring-2 focus:ring-ring transition-all duration-200 outline-none bg-background text-foreground"
+                  // FOCO EXPLÍCITO: focus:border-purple-600
+                  className={`w-full px-4 py-3 border border-input rounded-lg focus:border-${PURPLE_BASE} focus:ring-2 focus:ring-${PURPLE_BASE}/50 transition-all duration-200 outline-none bg-background text-foreground`}
                   placeholder="Digite o nome da sua empresa/instituição"
                 />
                 {errors.name && (
@@ -162,7 +170,8 @@ export default function Modal({ isOpen, onClose}: ModalProps) {
                 <Input
                   {...register("email")}
                   type="email"
-                  className="w-full px-4 py-3 border border-input rounded-lg focus:border-primary focus:ring-2 focus:ring-ring transition-all duration-200 outline-none bg-background text-foreground"
+                  // FOCO CORRIGIDO: Agora usa focus:border-purple-600 explicitamente
+                  className={`w-full px-4 py-3 border border-input rounded-lg focus:border-${PURPLE_BASE} focus:ring-2 focus:ring-${PURPLE_BASE}/50 transition-all duration-200 outline-none bg-background text-foreground`}
                   placeholder="seu@email.com"
                 />
                 {errors.email && (
@@ -178,7 +187,8 @@ export default function Modal({ isOpen, onClose}: ModalProps) {
                 <Input
                   {...register("phone")}
                   type="tel"
-                  className="w-full px-4 py-3 border border-input rounded-lg focus:border-primary focus:ring-2 focus:ring-ring transition-all duration-200 outline-none bg-background text-foreground"
+                  // FOCO EXPLÍCITO: focus:border-purple-600
+                  className={`w-full px-4 py-3 border border-input rounded-lg focus:border-${PURPLE_BASE} focus:ring-2 focus:ring-${PURPLE_BASE}/50 transition-all duration-200 outline-none bg-background text-foreground`}
                   placeholder="(11) 99999-9999"
                   onChange={handlePhoneChange}
                 />
@@ -195,18 +205,20 @@ export default function Modal({ isOpen, onClose}: ModalProps) {
                   type="button"
                   onClick={handleClose}
                   variant="outline"
-                  className="flex-1 px-6 py-3 border border-border text-foreground rounded-lg hover:bg-muted transition-all duration-200 font-semibold bg-transparent"
+                  className="flex-1 px-6 py-3 border border-border text-foreground rounded-lg hover:bg-purple-600"
                 >
                   Cancelar
                 </Button>
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="flex-1 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-orange-dark disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 font-semibold shadow-orange flex items-center justify-center gap-2"
+
+                  className={`flex-1 px-6 py-3 bg-${PURPLE_BASE} text-white rounded-lg hover:bg-${PURPLE_HOVER} disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 font-semibold shadow-xl shadow-${PURPLE_BASE}/30 flex items-center justify-center gap-2`}
                 >
                   {isSubmitting ? (
                     <>
-                      <div className="w-5 h-5 border-2 border-primary-foreground border-t-transparent rounded-full animate-spin"></div>
+                      {/* Cor do spinner ajustada para branco */}
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                       Enviando...
                     </>
                   ) : (
@@ -221,7 +233,8 @@ export default function Modal({ isOpen, onClose}: ModalProps) {
           </div>
         ) : (
           <div className="p-6 text-center">
-            <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-orange">
+
+            <div className={`w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl shadow-${PURPLE_BASE}/30`}>
               <CheckCircle className="w-10 h-10 text-white" />
             </div>
             <h3 className="text-2xl font-bold text-foreground mb-2">Solicitação Enviada!</h3>
@@ -230,7 +243,8 @@ export default function Modal({ isOpen, onClose}: ModalProps) {
             </p>
             <Button
               onClick={handleClose}
-              className="px-8 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-orange-dark transition-all duration-200 font-semibold shadow-orange"
+
+              className={`px-8 py-3 bg-${PURPLE_BASE} text-white rounded-lg hover:bg-${PURPLE_HOVER} transition-all duration-200 font-semibold shadow-xl shadow-${PURPLE_BASE}/30`}
             >
               Fechar
             </Button>
