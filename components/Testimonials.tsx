@@ -6,8 +6,8 @@ import testimonials from "@/json/testimonials.json";
 const Testimonials = () => {
     // Definindo as classes de cor roxa
     const PURPLE_COLOR = "text-purple-600";
-    const PURPLE_LIGHT_FALLBACK = "bg-purple-600 text-white"; // Fallback para Avatar
-    const PURPLE_HOVER_GRADIENT = "from-purple-600 to-purple-400"; // Gradiente de hover
+    const PURPLE_LIGHT_FALLBACK = "bg-purple-600 text-white"; 
+    const PURPLE_HOVER_GRADIENT = "from-purple-600 to-purple-400"; 
 
     return (
         <section
@@ -42,7 +42,7 @@ const Testimonials = () => {
 
                                 <CardContent className="p-6 flex flex-col h-full">
                                     <meta itemProp="reviewAspect" content="Experiência do Aluno" />
-                                    <Quote className={`h-8 w-8 ${PURPLE_COLOR} mb-4 opacity-50`} /> {/* Alterado text-primary para roxo */}
+                                    <Quote className={`h-8 w-8 ${PURPLE_COLOR} mb-4 opacity-50`} /> 
                                     <div
                                         className="flex gap-1 mb-4"
                                         itemProp="reviewRating"
@@ -69,7 +69,7 @@ const Testimonials = () => {
                                     >
                                         <Avatar className="h-12 w-12">
                                             <AvatarImage src="" />
-                                            <AvatarFallback className={PURPLE_LIGHT_FALLBACK}> {/* Alterado bg-primary text-primary-foreground para roxo */}
+                                            <AvatarFallback className={PURPLE_LIGHT_FALLBACK}> 
                                                 {testimonial.avatar}
                                             </AvatarFallback>
                                         </Avatar>
@@ -82,7 +82,7 @@ const Testimonials = () => {
                                     </div>
                                 </CardContent>
                             </Card>
-                            <div className={`absolute inset-0 rounded-lg bg-gradient-to-r ${PURPLE_HOVER_GRADIENT} opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none`}></div> {/* Alterado de-primary to-orange-light para roxo */}
+                            <div className={`absolute inset-0 bg-gradient-to-r ${PURPLE_HOVER_GRADIENT} opacity-0 group-hover:opacity-10 transition-opacity duration-300 `}></div> 
                         </li>
                     ))}
                 </ul>
@@ -95,7 +95,7 @@ const Testimonials = () => {
                         { value: "20+", label: "Cursos de Alta Demanda" }
                     ].map((stat, i) => (
                         <div key={i} className="text-center">
-                            <div className={`text-4xl font-bold mb-2 ${PURPLE_COLOR}`}>{stat.value}</div> {/* Alterado text-primary para roxo */}
+                            <div className={`text-4xl font-bold mb-2 ${PURPLE_COLOR}`}>{stat.value}</div> 
                             <div className="text-muted-foreground">{stat.label}</div>
                         </div>
                     ))}
