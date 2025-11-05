@@ -34,11 +34,10 @@ const Footer = () => {
     
   ];
 
-  // ATENÇÃO: Os links sociais precisam ser atualizados para os da Forma Sudeste!
+ 
   const socialLinks = [
-    { icon: Instagram, href: "" }, // Link de Exemplo
-    { icon: Linkedin, href: "" }, // Adicionado LinkedIn, relevante para parcerias
-    { icon: Youtube, href: "" }, // Link de Exemplo
+    { icon: Instagram, href: "https://www.instagram.com/formasudeste?igsh=MWxlY2xveXR6ejZzaQ==" }, 
+    
   ];
 
   const handleOpenModal = (modalType: string) => {
@@ -59,8 +58,8 @@ const Footer = () => {
             <div className="flex items-center space-x-2 mb-2">
               <div className="w-10 h-10 flex items-center justify-center">
                 <Image
-                  // ATENÇÃO: Altere para o caminho da sua imagem
-                  src="/logo-formasudeste.webp"
+                  
+                  src="/logoformasudeste.webp"
                   alt="Forma Sudeste Logo"
                   width={30}
                   height={30}
@@ -78,8 +77,8 @@ const Footer = () => {
                 <a
                   key={index}
                   href={link.href}
-                  target="_blank" // Adicionado para abrir em nova aba
-                  rel="noopener noreferrer" // Prática de segurança
+                  target="_blank" 
+                  rel="noopener noreferrer" 
                   className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
                 >
                   <link.icon className="h-5 w-5" />
@@ -95,7 +94,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="hover:text-white transition-colors" // Alterei para 'hover:text-white' para maior contraste
+                    className="hover:text-white transition-colors" 
                   >
                     {link.text}
                   </a>
@@ -115,12 +114,11 @@ const Footer = () => {
                 CEP: 35170-061
               </p>
               <p>
-                <strong>Telefone:</strong> (31) 97314-4070
-                {/* RECOMENDADO: Use um número específico para Parcerias se possível */}
+                <strong>Telefone:</strong> (31) 981076323
+                
               </p>
               <p>
                 <strong>E-mail:</strong> gerenciageraltecminas@gmail.com
-                {/* RECOMENDADO: Use um e-mail de domínio próprio e/ou um específico para parcerias (ex: parcerias@formasudeste.com.br) */}
               </p>
               <p>
                 <strong>Horário de Atendimento:</strong>

@@ -32,17 +32,7 @@ const Header = () => {
                     <div className="flex items-center justify-between">
                         {/* Logo */}
                         <div className="flex items-center space-x-2">
-                            <div className="w-10 h-10 flex items-center justify-center">
-                                <Image
-                                    src="/logo-marinho.webp" 
-                                    alt="Logo da Forma Sudeste" 
-                                    width={40}
-                                    height={40}
-                                    className="rounded-lg"
-                                />
-                                
-                            </div>
-                          
+                            
                             <a href="/" className="text-xl font-bold text-purple-600">Forma Sudeste Educação e Negócios</a> 
                         </div>
 

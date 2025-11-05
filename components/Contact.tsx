@@ -11,7 +11,7 @@ const Contact = () => {
             title: "Localização Central",
             info: "Luiz Rodrigues dos Santos, 44\nTodos os Santos - Coronel Fabriciano/MG\nCEP: 35170-061"
         },
-        { icon: Phone, title: "Fale Conosco", info: "(31) 97314-4070 " },
+        { icon: Phone, title: "Fale Conosco", info: "(31) 981076323 " },
         { icon: Mail, title: "E-mail Direto", info: "gerenciageraltecminas@gmail.com" },
         { icon: Clock, title: "Horário de Atendimento", info: "Segunda a Sexta: 8h às 18h" }
     ];
@@ -28,7 +28,7 @@ const Contact = () => {
             <div className="container mx-auto px-4">
                 <header className="text-center mb-16">
                     <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                        Fale com a <span className="text-purple-600">Forma Sudeste</span> {/* Alterado de text-primary para roxo */}
+                        Fale com a <span className="text-purple-600">Forma Sudeste</span> 
                     </h1>
                     <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                         Pronto para iniciar sua jornada técnica? Tire suas dúvidas sobre os cursos ou explore oportunidades de parceria.

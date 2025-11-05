@@ -45,7 +45,7 @@ const About = () => {
       contacts: [
         {
           
-          number: "(31) 97314-4070",
+          number: "(31) 981076323",
           href: "https://wa.me/5531993422575?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20as%20parcerias%20com%20o%20Col%C3%A9gio%20T%C3%A9cnico%20Forma%20Sudeste.%20Poderiam%20me%20ajudar%3F"
         },
       ]
