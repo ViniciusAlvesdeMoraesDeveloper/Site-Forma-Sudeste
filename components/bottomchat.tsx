@@ -4,7 +4,7 @@ import { Phone } from "lucide-react";
 import { MessageCircle} from "lucide-react"; 
 
 export default function WhatsAppButton() {
-  const phoneNumber = "5531973144070"; 
+  const phoneNumber = "5531981076323"; 
   const message =
     "Olá! Gostaria de falar com um consultor sobre a oportunidade de ser Parceiro da Forma Sudeste.";
 
