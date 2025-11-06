@@ -28,7 +28,7 @@ const Contact = () => {
             <div className="container mx-auto px-4">
                 <header className="text-center mb-16">
                     <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                        Fale com a <span className="text-purple-600">Forma Sudeste</span> 
+                        Fale com a <span className="text-purple-600">Forma Sudeste</span>
                     </h1>
                     <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                         Pronto para iniciar sua jornada técnica? Tire suas dúvidas sobre os cursos ou explore oportunidades de parceria.
@@ -45,13 +45,13 @@ const Contact = () => {
                                 itemProp="contactPoint"
                                 itemType="https://schema.org/ContactPoint"
                             >
-                                <Card className="flex group hover:shadow-purple-400 transition-shadow border-none"> {/* Alterado hover:shadow-orange para hover:shadow-purple-400 */}
-                                    <CardContent className="p-6 w-full">
-                                        <div className="flex items-start gap-4">
-                                            <div className="bg-purple-600/10 p-3 rounded-lg transition-colors"> {/* Alterado bg-primary/10 para bg-purple-600/10 */}
-                                                <item.icon className="h-6 w-6 text-purple-600" /> {/* Alterado text-primary para text-purple-600 */}
+                                <Card className="flex group hover:shadow-purple-400 transition-shadow border-none h-full min-h-[160px]">
+                                    <CardContent className="p-6 w-full h-full flex">
+                                        <div className="flex items-start gap-4 w-full">
+                                            <div className="bg-purple-600/10 p-3 rounded-lg transition-colors flex-shrink-0">
+                                                <item.icon className="h-6 w-6 text-purple-600" />
                                             </div>
-                                            <div>
+                                            <div className="flex-1">
                                                 <h2 itemProp="contactType" className="font-semibold text-lg mb-2 text-foreground">
                                                     {item.title}
                                                 </h2>
